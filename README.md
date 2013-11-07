@@ -33,7 +33,7 @@ server5,server5.domain.com,192.168.1.6
 server6,server6.domain.com,192.168.1.7
 </pre>
 
-<b>readF function - read file</b>
+<h3>readF function - read file</h3>
 
 <pre>
 text = fm.readF("file.txt")
@@ -94,3 +94,12 @@ Alias is server6.domain.com
 Ip is 192.168.1.7
 
 </pre>
+
+<h3>writeF function - write text in file</h3>
+Ok, this is simple
+<pre>
+fm.writeF("file.txt", "w", "New text file")
+</pre>
+or
+<pre>
+fm.writeF("file.txt", "a", "new text in append")
