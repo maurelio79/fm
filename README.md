@@ -48,7 +48,7 @@ server4,server4.domain.com,192.168.1.5
 server5,server5.domain.com,192.168.1.6
 server6,server6.domain.com,192.168.1.7
 </pre>
-
+Now passing the param 'list'
 <pre>
 text = fm.readF("file.txt", param=['list']
 print text
@@ -56,4 +56,41 @@ print text
 Output:
 <pre>
 ['server1,server1.domain.com,192.168.1.2\n', 'server2,server2.domain.com,192.168.1.3\n', 'server3,server3.domain.com,192.168.1.4\n', 'server4,server4.domain.com,192.168.1.5\n', 'server5,server5.domain.com,192.168.1.6\n', 'server6,server6.domain.com,192.168.1.7\n']
+</pre>
+So, for example, adding a simple cycle
+<pre>
+text = fm.readF("file.txt", param=['list'])
+for i in text:
+        line_split = i.split(",")
+        print "Hostname is %s" % (line_split[0])
+        print "Alias is %s" % (line_split[1])
+        print "Ip is %s" % (line_split[2])
+
+</pre>
+we can get the following output
+<pre>
+Hostname is server1
+Alias is server1.domain.com
+Ip is 192.168.1.2
+
+Hostname is server2
+Alias is server2.domain.com
+Ip is 192.168.1.3
+
+Hostname is server3
+Alias is server3.domain.com
+Ip is 192.168.1.4
+
+Hostname is server4
+Alias is server4.domain.com
+Ip is 192.168.1.5
+
+Hostname is server5
+Alias is server5.domain.com
+Ip is 192.168.1.6
+
+Hostname is server6
+Alias is server6.domain.com
+Ip is 192.168.1.7
+
 </pre>
