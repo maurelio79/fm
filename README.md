@@ -121,7 +121,7 @@ server6,server6.domain.com,192.168.1.7
 </pre>
 
 <h3>substrF function - find & replace string or more strings in file</h3>
-String to find and to replace need to passed as python dictionary.
+String to find and string to replace need to be passed as python dictionary.
 <pre>
 dic = {",":"-","com":"org"}
 fm.substrF("file.txt", dic)
@@ -135,3 +135,5 @@ server4-server4.domain.org-192.168.1.5
 server5-server5.domain.org-192.168.1.6
 server6-server6.domain.org-192.168.1.7
 </pre>
+As you can see, we change every occurence of ':' to '-' and every occurence of 'com' to 'org'
+You can add as many string as you want.
