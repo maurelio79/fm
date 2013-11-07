@@ -103,3 +103,35 @@ fm.writeF("file.txt", "w", "New text file")
 or
 <pre>
 fm.writeF("file.txt", "a", "new text in append")
+</pre>
+
+<h3>prependF function - prepend text in file</h3>
+<pre>
+fm.rependF("file.txt", "# This is my server list")
+</pre>
+The result will be the followinf file:
+<pre>
+# This is my server list
+server1,server1.domain.com,192.168.1.2
+server2,server2.domain.com,192.168.1.3
+server3,server3.domain.com,192.168.1.4
+server4,server4.domain.com,192.168.1.5
+server5,server5.domain.com,192.168.1.6
+server6,server6.domain.com,192.168.1.7
+</pre>
+
+<h3>substrF function - find & replace string or more strings in file</h3>
+String to find and to replace need to passed as python dictionary.
+<pre>
+dic = {",":"-","com":"org"}
+fm.substrF("file.txt", dic)
+</pre>
+The result will be the following file
+<pre>
+server1-server1.domain.org-192.168.1.2
+server2-server2.domain.org-192.168.1.3
+server3-server3.domain.org-192.168.1.4
+server4-server4.domain.org-192.168.1.5
+server5-server5.domain.org-192.168.1.6
+server6-server6.domain.org-192.168.1.7
+</pre>
