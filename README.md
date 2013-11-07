@@ -48,7 +48,7 @@ server4,server4.domain.com,192.168.1.5
 server5,server5.domain.com,192.168.1.6
 server6,server6.domain.com,192.168.1.7
 </pre>
-Now passing the param 'list'
+Now passing the param <a href="http://docs.python.org/3/tutorial/introduction.html#lists">'list'</a>
 <pre>
 text = fm.readF("file.txt", param=['list']
 print text
@@ -121,7 +121,7 @@ server6,server6.domain.com,192.168.1.7
 </pre>
 
 <h3>substrF function - find & replace string or more strings in file</h3>
-String to find and string to replace need to be passed as python dictionary.
+String to find and string to replace need to be passed as python <a href="http://docs.python.org/3/tutorial/datastructures.html#dictionaries">dictionary</a>.
 <pre>
 dic = {",":"-","com":"org"}
 fm.substrF("file.txt", dic)
