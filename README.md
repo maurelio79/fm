@@ -107,9 +107,9 @@ fm.writeF("file.txt", "a", "new text in append")
 
 <h3>prependF function - prepend text in file</h3>
 <pre>
-fm.rependF("file.txt", "# This is my server list")
+fm.prependF("file.txt", "# This is my server list")
 </pre>
-The result will be the followinf file:
+The result will be the following file:
 <pre>
 # This is my server list
 server1,server1.domain.com,192.168.1.2
