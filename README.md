@@ -135,5 +135,5 @@ server4-server4.domain.org-192.168.1.5
 server5-server5.domain.org-192.168.1.6
 server6-server6.domain.org-192.168.1.7
 </pre>
-As you can see, we change every occurence of ':' to '-' and every occurence of 'com' to 'org'
+As you can see, we change every occurence of ',' to '-' and every occurence of 'com' to 'org'
 You can add as many string as you want.
